@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#navbarNavAltMarkup{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    font-family: monospace;
+    color: white;
+    background-color: gray;
+}
+
+
+
+
+
+.carousel-test-{
+    margin: 20%;
+    width: 60%;
+    height: 60%;
+}
