@@ -5,6 +5,14 @@ html{
     
 }
 
+h1, h2, p, label, button, a{
+    font-family: monospace;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
 body{
     background-image: url("../img/background.png");
     background-repeat: repeat;
@@ -38,6 +46,11 @@ nav a{
     font-size: large;
 }
 
+nav a:hover{
+    box-shadow: 0px 0px 5px 5px rgb(255, 255, 255);
+    transition-duration: 1s;
+    font-size: 2em;
+}
 nav ul {
     list-style: none;
     margin: 0;
@@ -60,7 +73,7 @@ nav ul li {
 .image, .detalles{
     color: white;
     border-radius: 15px;
-    margin: 100px auto auto auto;
+    margin: 100px auto ;
     padding: 1em;
     background-color: rgb(52,52,52);
     display: flex;
@@ -70,11 +83,6 @@ nav ul li {
 }
 
 
-
-
-.fullbottom{
-    bottom: 0px;
-}
 
 
 footer {
@@ -89,7 +97,11 @@ footer {
     padding: 10px;
     margin-top: auto;
 }
-
+footer img{
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
 .columna {
     flex: 1;
     text-align: center;
@@ -97,45 +109,57 @@ footer {
 }
 
 
-/* PAGINA GALERIA */
 
-.contenedor-grilla{
+.redes-sociales{
     display: flex;
     flex-direction: row;
-    align-items: center;
+}
+
+/* PAGINA GALERIA */
+
+.gridcontainer{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: 5%;
-    padding: 10px;
-    background-color: #fff;
-    color: #444;
-
+    align-items: center;
+    color: white;
+    background-color: rgb(52,52,52);
+    border-radius: 1em;
+    margin: 15vh auto;
+    height: 75vh;
+    width: 60vw;
+    padding: 1em;
+    gap: 1em;
 }
 
 
-
-#grilla{
+.grilla{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "a b c";
-    grid-gap: 100px;
-    margin: 10px;
-    padding: 10px;
-    background-color: #fff;
-    color: #444;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 1em;
+    margin: 1em;
 }
 
-
+.objeto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    background-color: rgb(27, 27, 27);
+    border-radius: 0.5em;
+}
 /* pagina contactos */
 
 .container{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     gap: 6em;
     margin: 100px 0px;
 }
 
 .sidebar{
-    float: left;
     width: 40%;
 }
 
@@ -189,17 +213,47 @@ form button:hover{
 }
 
 
+.leftbox{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(52,52,52);
+    border-radius: 1em;
+    padding: 0;
+}
+
+
+.innerbox h2,p{
+    color: white;
+    font-size: auto;
+}
 
 
 
 
+/* detalles */
+.box{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(52,52,52);
+    border-radius: 1em;
+    padding: 1m;
+    margin: 15vh auto;
+    height: 75vh;
+    width: 60vw;
 
+}
 
-
-
-
-
-
+.box img{
+    width: 90%;
+    height: 90%;
+    border-radius: 1em;
+}
 
 
 
