@@ -1,26 +1,210 @@
-*{
+
+
+html{
+    height: 100vh;
+    
+}
+
+body{
+    background-image: url("../img/background.png");
+    background-repeat: repeat;
+    background-position: top left;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-#navbarNavAltMarkup{
+
+
+/* nav */
+header{
+    position: fixed;
+    width: 100%;
+}
+nav {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(52,52,52);
+    padding: 1em;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+
+.image img{
+    border-radius: 15px;
+    width: 60%;
+    height: 60%;
+}
+
+
+.image, .detalles{
+    color: white;
+    border-radius: 15px;
+    margin: 100px auto auto auto;
+    padding: 1em;
+    background-color: rgb(52,52,52);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.fullbottom{
+    bottom: 0px;
+}
+
+
+footer {
+    width: 100vw;
+    color: white;
+    background-color: rgb(52,52,52);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    margin-top: auto;
+}
+
+.columna {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* PAGINA GALERIA */
+
+.contenedor-grilla{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin: 5%;
+    padding: 10px;
+    background-color: #fff;
+    color: #444;
+
 }
 
-footer{
-    font-family: monospace;
+
+
+#grilla{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "a b c";
+    grid-gap: 100px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    color: #444;
+}
+
+
+/* pagina contactos */
+
+.container{
+    display: flex;
+    gap: 6em;
+    margin: 100px 0px;
+}
+
+.sidebar{
+    float: left;
+    width: 40%;
+}
+
+.sidebar img{
+    width: 100%;
+}
+
+
+.formulario{
+    background-color: rgb(52,52,52);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+form{
     color: white;
-    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+form input, textarea{
+    border: none;
+    border-radius: 1em;
+}
+
+form input:focus, textarea:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px 5px rgb(255, 255, 255);
+}
+
+
+form button{
+    border: none;
+    border-radius: 1em;
+    color: white;
+    background-color: rgb(121, 121, 121);
+}
+
+form button:hover{
+    transition-duration: 1s;
+    background-color: rgb(192, 188, 188);
+    color: black;
 }
 
 
 
 
 
-.carousel-test-{
-    margin: 20%;
-    width: 60%;
-    height: 60%;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive */
