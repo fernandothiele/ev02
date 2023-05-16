@@ -2,11 +2,12 @@
 
 html{
     height: 100vh;
-    
+    width: 100vw;
 }
 
 h1, h2, p, label, button, a{
     font-family: monospace;
+    color: white;
 }
 
 body::-webkit-scrollbar{
@@ -23,6 +24,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-width: fit-content;
 }
 
 
@@ -72,30 +74,44 @@ nav ul li {
 
 .image, .detalles{
     color: white;
-    border-radius: 15px;
-    margin: 100px auto ;
+    border-radius: 1em;
+    margin: 2.5em auto ;
     padding: 1em;
     background-color: rgb(52,52,52);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: auto;
 }
 
 
-
+.indexBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    padding: 1em;
+    width: 80%;
+}
 
 footer {
     width: 100vw;
     color: white;
     background-color: rgb(52,52,52);
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     padding: 10px;
     margin-top: auto;
+}
+
+table{
+    display: flex;
+    flex-direction: column;
 }
 footer img{
     width: 50px;
@@ -118,27 +134,29 @@ footer img{
 /* PAGINA GALERIA */
 
 .gridcontainer{
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     background-color: rgb(52,52,52);
     border-radius: 1em;
-    margin: 15vh auto;
-    height: 75vh;
-    width: 60vw;
-    padding: 1em;
+    margin: 7% auto;
+    height: auto;
+    width: auto;
+    padding: 0 1em 1em 1em;; 
     gap: 1em;
 }
 
 
 .grilla{
+    height: 40em;
+    width: 60em;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
     gap: 1em;
-    margin: 1em;
 }
 
 .objeto{
@@ -146,8 +164,24 @@ footer img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5em;
+    padding: 1em;
     background-color: rgb(27, 27, 27);
+    border-radius: 0.5em;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.objeto h5{
+    
+    margin-bottom: 0;
+}
+.objeto p{
+    margin-bottom: 0;
+}
+.objeto img{
+    width: 40%;
+    height: auto;
     border-radius: 0.5em;
 }
 /* pagina contactos */
@@ -199,14 +233,14 @@ form input:focus, textarea:focus{
 }
 
 
-form button{
+html button{
     border: none;
-    border-radius: 1em;
+    border-radius: 5em;
     color: white;
     background-color: rgb(121, 121, 121);
 }
 
-form button:hover{
+html button:hover{
     transition-duration: 1s;
     background-color: rgb(192, 188, 188);
     color: black;
@@ -221,7 +255,7 @@ form button:hover{
     align-items: center;
     background-color: rgb(52,52,52);
     border-radius: 1em;
-    padding: 0;
+    padding: auto;
 }
 
 
@@ -242,16 +276,16 @@ form button:hover{
     align-items: center;
     background-color: rgb(52,52,52);
     border-radius: 1em;
-    padding: 1m;
-    margin: 15vh auto;
-    height: 75vh;
-    width: 60vw;
+    padding: 0.5em;
+    margin: 10% auto;
+    height: auto;
+    width: 80%;
 
 }
 
 .box img{
     width: 90%;
-    height: 90%;
+    height: auto;
     border-radius: 1em;
 }
 
@@ -262,3 +296,15 @@ form button:hover{
 
 
 /* responsive */
+@media (max-width:1170px){
+    .grilla{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        height: auto;
+        width: auto;
+    }
+    .container{
+        grid-template-columns: auto;
+    }
+
+}
