@@ -184,6 +184,15 @@ footer img{
     height: auto;
     border-radius: 0.5em;
 }
+
+.objeto:hover{
+    color: red;
+    transition-duration: 1s;
+    cursor: pointer;
+    z-index: 1;
+    width: 120%;
+    box-shadow: 0px 0px 5px 5px rgb(255, 255, 255);
+}
 /* pagina contactos */
 
 .container{
@@ -306,5 +315,15 @@ html button:hover{
     .container{
         grid-template-columns: auto;
     }
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+    .columna {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    
 
 }
